@@ -1,3 +1,7 @@
+* {
+    font-family: 'Didact Gothic';
+}
+
 #content {
   margin-left: auto;
   margin-right: auto;
@@ -6,4 +10,10 @@
 
 #greeting-container {
   margin-top: 20px;
+}
+
+#profile-pic {
+    justify-content: center;
+    width : 500px;
+    height: auto;
 }
