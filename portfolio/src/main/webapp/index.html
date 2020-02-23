@@ -3,16 +3,95 @@
   <head>
     <meta charset="UTF-8">
     <title>My Portfolio</title>
+    <link href='https://fonts.googleapis.com/css?family=Didact Gothic'rel='stylesheet' >
     <link rel="stylesheet" href="style.css">
     <script src="script.js"></script>
   </head>
   <body>
-    <div id="content">
-      <h1>My Portfolio</h1>
-      <p>This is my portfolio.</p>
-      <p>Click here to get a random message:</p>
-      <button onclick="addRandomGreeting()">Hello</button>
+    <div class="nav-bar">
+        <ul class="nav-items">
+            <li class="nav-item">Home</li>
+            <li class="nav-item"><a href="https://www.linkedin.com/in/lorenzo-scaturchio-62203b160/">LinkedIn</a></li>
+            <li class="nav-item"><a href="https://github.com/gr8monk3ys">GitHub</a></li>
+            <li class="nav-item"><a href="../downloads/Lorenzo_Resume.pdf" download>Resume</a></li>
+        </ul>
+    </div>
+    <div class="container">
+        <div class="parallax"></div>    
+        <h1 class="centered">Lorenzo's Portfolio</h1>
+    </div>
+    
+    <img src="../images/profile-pic.jpg" id="profile-pic">
+    <div class="content">
+        <p id="aboutMe"> I am Lorenzo Scaturchio, I am currently and undergraduate Computer Science
+          major at the University of California, Merced. My main interests lie in the
+          clubs that I am apart of such as one called HackMerced where we are running our
+          very own hackathon, as well as the job that I am currently working on
+          which involves optimizing for hydropower facilities using python.
+        </p>
       <div id="greeting-container"></div>
+      <h2>Projects I Have Worked On</h2>
+      <h3>HackMerced Website</h3>
+      <img class="category-image" onclick="window.location.href='http://hackmerced.io/'"
+      src="../images/hackmerced.jpg">
+      <ul>
+          <li>Collaborated in creating the HackMerced-V website by working on the schedule react.js component</li>
+          <li>Facilitated workshops for hack events that are hosted by HackMerced, and sponsored by Major League Hacking (MLH)</li>
+      </ul>
+      <h3>Bobcat Racing Electrical Team</h3>
+      <ul>
+          <li>Hosted workshops that involved AutoDesk Eagle. Taught how to create simple schematics as well as taking 
+              the schematic and making a printed circuit board
+            </li>
+            <li>Conducted experiments such as discharge and current capacity tests in Mesa lab to determine battery cell durability
+            </li>
+      </ul>
+
+      <h2>Programming Languages</h2>
+        <img class="languages" src="../images/c++.png">
+        <img class="languages" src="../images/html5.png">
+        <img class="languages" src="../images/python.png">
+        <img class="languages" src="../images/java.png">
+
+      <h2>Education</h2>
+      <div class="educaition"> 
+          <img class="category-image" src="../images/merced.jpg" 
+          onclick="window.location.href='https://www.ucmerced.edu/school-of-engineering'">
+          <h3>University of California, Merced</h3>
+          <p>Bachelors in Computer Science & Engineering GPA: (3.71) </p>
+          <p>graduation date: 2022</p> 
+          <h4>Coursework</h4>
+          <ul>
+              <li>Data Structures</li>
+              <li>Discrete Mathematics</li>
+              <li>Computational Organization</li>
+              <li>Algorithms</li>
+          </ul>
+      </div>
+      <h2>Work Experience</h2>
+      <div class="work-experience">
+          <h3>Vice Lab - Research Assistant</h3>
+          <p>January 21, 2020 - Current</p>
+          <img class="category-image" src="../images/hydropower.jpg" 
+          onclick="window.location.href='http://vicelab.ucmerced.edu/'">
+          
+          <ul>
+              <li> Worked on documentation and research for how to better optimize hydropower facilities 
+                  using a python library called Pywr</li>
+          </ul>
+
+          <h3>Damien High School - Information Technology Intern</h3>
+          <p>May 30, 2018 - August 7, 2018</p>
+            <img class="category-image" src="../images/damien.jpg" 
+          onclick="window.location.href='https://www.damien-hs.edu/'">
+            <ul>
+              <li>Setup Licensed software to several of the school-owned laptops. 
+                  Installed twelve TV's as well as running CAT 6 / CAT 5 wire throughout the school. </li>
+              <li>Collaborated in installing two system network nodes within the campus. Collaborated 
+                  in installing two system network nodes within the campus.</li>
+              <li>Re-formatted all the computers in each classroom, installing the newest version of Windows Education</li>
+          </ul>
+      </div>
     </div>
   </body>
-</html>
+</html> 
