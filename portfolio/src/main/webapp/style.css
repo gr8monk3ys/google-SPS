@@ -1,19 +1,140 @@
-* {
+* { 
     font-family: 'Didact Gothic';
+    color: whitesmoke;
 }
 
-#content {
+body {
+background-image: linear-gradient(#434343,#000000);
+}
+
+.nav-items {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #333;
+}
+
+.nav-item {
+    float: left;
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+/* Change the link color to #111 (black) on hover */
+.nav-item:hover {
+  background-color: rgb(24, 57, 163);
+}
+
+.parallax {
+    background-image: url("../images/fiberOptic.jpg");
+    height: 500px;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    filter: blur(4px);
+    -webkit-filter: blur(4px); 
+}
+
+.centered {
+  position: absolute;
+  font-size: 40px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+#profile-pic {
+    border-radius: 50%;
+    width: 30%;
+    height: 0%;
+    transition: height 0.5s;
+    transition: width 0.5s;
+}
+
+#profile-pic:hover {
+    height: 35%;
+    width: 35%;
+}
+
+.content {    
   margin-left: auto;
   margin-right: auto;
   width: 650px;
 }
 
-#greeting-container {
-  margin-top: 20px;
+.languages {
+    height: 10%;
+    width: 10%;
+    transition-duration: 0.3s;
 }
 
-#profile-pic {
+.languages:hover {
+    transform: perspective(1px) translateZ(5%);
+}
+
+.category-image {
     justify-content: center;
-    width : 500px;
-    height: auto;
+    width : 90%;
+    height: 200px;
+    padding: 1%;
+    transition: ease-in 1s ease-out 2s;
+    filter: blur(4px);
+    -webkit-filter: blur(4px); 
+}
+
+.category-image:hover {
+    filter: blur(0);
+    -webkit-filter: blur(0);
+}
+
+.footer {
+   position: fixed;
+   left: 0;
+   bottom: 0;
+   width: 100%;
+   background-color: #434343;
+   color: white;
+   text-align: center;
+}
+
+.fa {
+    float: left;
+  padding: 5px;
+  font-size: 5px;
+  width: 30px;
+  height: 30px;
+  text-align: center;
+  text-decoration: none;
+  margin: 5px 2px;
+  border-radius: 50%;
+}
+
+.fa:hover {
+    opacity: 0.7;
+}
+
+.fa-snapchat-ghost {
+  background: #fffc00;
+  color: white;
+  text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+}
+
+.fa-instagram {
+  background: #125688;
+  color: white;
+}
+
+.fa-linkedin {
+  background: #007bb5;
+  color: white;
+}
+
+.fa-facebook {
+  background: #3B5998;
+  color: white;
 }

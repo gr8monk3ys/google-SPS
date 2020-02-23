@@ -3,44 +3,95 @@
   <head>
     <meta charset="UTF-8">
     <title>My Portfolio</title>
-    <link href='https://fonts.googleapis.com/css?family=Didact Gothic' rel='stylesheet'>
+    <link href='https://fonts.googleapis.com/css?family=Didact Gothic' 
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel='stylesheet' >
     <link rel="stylesheet" href="style.css">
     <script src="script.js"></script>
   </head>
   <body>
-    <div id="content">
-        <img src="../images/profile-pic.jpg" id="profile-pic">
-      <h1>Lorenzo's Portfolio</h1>
-      <p>This is my portfolio.</p>
-      <p>Click here to get a random message:</p>
-      <button onclick="addRandomGreeting()">Hello</button>
-      <div id="greeting-container"></div>
-      <p> I am Lorenzo Scaturchio, I am currently and undergraduate Computer Science
+    <div class="nav-bar">
+        <ul class="nav-items">
+            <li class="nav-item">Home</li>
+            <li class="nav-item"><a href="https://www.linkedin.com/in/lorenzo-scaturchio-62203b160/">LinkedIn</a></li>
+            <li class="nav-item"><a href="https://github.com/gr8monk3ys">GitHub</a></li>
+            <li class="nav-item"><a href="../downloads/Lorenzo_Resume.pdf" download>Resume</a></li>
+        </ul>
+    </div>
+    <div class="container">
+        <div class="parallax"></div>    
+        <h1 class="centered">Lorenzo's Portfolio</h1>
+    </div>
+    
+    <img src="../images/profile-pic.jpg" id="profile-pic">
+    <div class="content">
+        <p id="aboutMe"> I am Lorenzo Scaturchio, I am currently and undergraduate Computer Science
           major at the University of California, Merced. My main interests lie in the
           clubs that I am apart of such as one called HackMerced where we are running our
           very own hackathon, as well as the job that I am currently working on
           which involves optimizing for hydropower facilities using python.
-      </p>
+        </p>
+      <div id="greeting-container"></div>
       <h2>Projects I Have Worked On</h2>
+      <h3>HackMerced Website</h3>
+      <img class="category-image" onclick="window.location.href='http://hackmerced.io/'"
+      src="../images/hackmerced.jpg">
       <ul>
-          <li>
-              <a href="http://hackmerced.io/">HackMerced Website</a>
+          <li>Collaborated in creating the HackMerced-V website by working on the schedule react.js component</li>
+          <li>Facilitated workshops for hack events that are hosted by HackMerced, and sponsored by Major League Hacking (MLH)</li>
+      </ul>
+      <h3>Bobcat Racing Electrical Team</h3>
+      <ul>
+          <li>Hosted workshops that involved AutoDesk Eagle. Taught how to create simple schematics as well as taking 
+              the schematic and making a printed circuit board
             </li>
-          <li>Sierra-Pywr</li>
-          <li>Bobcat Racing Electrical Team</li>
+            <li>Conducted experiments such as discharge and current capacity tests in Mesa lab to determine battery cell durability
+            </li>
       </ul>
-      <h2>Profiles</h2>
-      <ul>
-          <li><a href="https://github.com/gr8monk3ys">LinkedIn</a></li>
-          <li> <a href="https://www.linkedin.com/in/lorenzo-scaturchio-62203b160/">GitHub</a></li>
-      </ul>
-      <p>One hidden talent that I have is that I can play multiple instruments. I have
+      <p>
+          One hidden talent that I have is that I can play multiple instruments. I have
           been in a band before and I used to play the guitar, but I was also able to play
           the bass, keyboard, ukulele, and mandolin.
       </p>
 
-      <p>If you are interested in seeing what types of hobbies I am into click </p>
-      <a href="hobbies.html">here</a>
+      <h2>Programming Languages</h2>
+        <img class="languages" src="../images/c++.png">
+        <img class="languages" src="../images/html5.png">
+        <img class="languages" src="../images/python.png">
+        <img class="languages" src="../images/java.png">
+
+      <h2>Education</h2>
+      <div class="educaition"> 
+          <img class="category-image" src="../images/merced.jpg" 
+          onclick="window.location.href='https://www.ucmerced.edu/school-of-engineering'">
+          <h3>University of California, Merced</h3>
+          <p>Bachelors in Computer Science & Engineering GPA: (3.71) </p>
+          <h4>Coursework</h4>
+          <ul>
+              <li>Data Structures</li>
+              <li>Discrete Mathematics</li>
+              <li>Computational Organization</li>
+              <li>Algorithms</li>
+          </ul>
+      </div>
+      <h2>Work Experience</h2>
+      <div class="work-experience">
+          <img class="category-image" src="../images/hydropower.jpg" 
+          onclick="window.location.href='http://vicelab.ucmerced.edu/'">
+          <h3 class="centered">Vice Lab</h3>
+          <ul>
+              <li></li>
+              <li></li>
+              <li></li>
+              <li></li>
+          </ul>
+      </div>
+
+    <!-- <div class="footer">
+        <a href="#" class="fa fa-linkedin"></a>
+        <a href="#" class="fa fa-instagram"></a>
+        <a href="#" class="fa fa-snapchat-ghost"></a>
+    </div> -->
+       
     </div>
   </body>
 </html> 
