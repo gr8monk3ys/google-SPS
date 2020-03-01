@@ -12,6 +12,12 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
+async function getGreeting() {
+  const response = await fetch('/main-greet');
+  const greet = await response.text();
+  document.getElementById('greet-container').innerText = greet;
+}
+
 /**
  * Fetches a random quote from the server and adds it to the DOM.
  */

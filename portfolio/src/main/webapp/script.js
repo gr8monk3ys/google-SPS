@@ -12,3 +12,21 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
+function getComment(){
+    fetch('/data').then(response => response.json()).then((data) => {
+        const statsListElement = document.getElementById('data-container');
+        statsListElement.innerHTML = '';
+        statsListElement.appendChild(
+            createListElement('Comment 1: ' + data.list.get(0)));
+        statsListElement.appendChild(
+            createListElement('Comment 2: ' + data.list.get(1)));
+        statsListElement.appendChild(
+            createListElement('Comment 3: ' + data.list.get(2)));
+    });
+}
+
+function createListElement(text) {
+  const liElement = document.createElement('li');
+  liElement.innerText = text;
+  return liElement;
+}
