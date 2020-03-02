@@ -10,7 +10,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 @WebServlet("/main-greet")
-public final class greetingServlet extends HttpServlet {
+public final class GreetingServlet extends HttpServlet {
     
     private List<String> greets;
 

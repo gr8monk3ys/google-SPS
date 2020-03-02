@@ -51,8 +51,6 @@ public void doPost(HttpServletRequest request, HttpServletResponse response) thr
     DatastoreService datastore = DatastoreServiceFactory.getDatastoreService();
     datastore.put(commentEntity);
 
-    /////////////////////////
-
     Query query = new Query("Comment").addSort("comment");
     PreparedQuery results = datastore.prepare(query);
 
@@ -64,24 +62,12 @@ public void doPost(HttpServletRequest request, HttpServletResponse response) thr
     }
 
     Gson gson = new Gson();
-
     response.setContentType("application/json;");
     response.getWriter().println(gson.toJson(list));
 }
 
-  private String convertToJson(ArrayList<String> data) {
-    String json = "{ \n";
-    json += "\"comment\": ";
-    json += "\"" + data + "\"";
-    json += ", ";
-    json += "\n";  
-    json += "}";
-    return json;
-}
-
   private String convertToJsonUsingGson(ArrayList<String> data) {
     Gson gson = new Gson();
-
     String json = gson.toJson(data);
     return json;
   }
