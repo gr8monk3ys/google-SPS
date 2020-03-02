@@ -14,19 +14,17 @@
 
 function getComment(){
     fetch('/data').then(response => response.json()).then((data) => {
-        const statsListElement = document.getElementById('data-container');
-        statsListElement.innerHTML = '';
-        statsListElement.appendChild(
-            createListElement('Comment 1: ' + data.list.get(0)));
-        statsListElement.appendChild(
-            createListElement('Comment 2: ' + data.list.get(1)));
-        statsListElement.appendChild(
-            createListElement('Comment 3: ' + data.list.get(2)));
+        const CommentListElement = document.getElementById('comment-list');
+        data.forEach((line) => {
+        CommentListElement.appendChild(createCommentElement(line));
+        })
     });
 }
 
-function createListElement(text) {
-  const liElement = document.createElement('li');
-  liElement.innerText = text;
-  return liElement;
-}
+    function createCommentElement(text) {
+        const liElement = document.createElement('li');
+        liElement.innerText = text;
+        return liElement;
+    }
+
+

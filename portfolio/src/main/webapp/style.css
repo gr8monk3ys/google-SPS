@@ -91,3 +91,12 @@ background-image: linear-gradient(#434343,#000000);
     filter: blur(0);
     -webkit-filter: blur(0);
 }
+
+#comment {
+    color: black;
+
+}
+
+#submit {
+    color: black;
+}

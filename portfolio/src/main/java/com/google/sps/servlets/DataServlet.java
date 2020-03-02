@@ -30,32 +30,38 @@ public class DataServlet extends HttpServlet {
 
     @Override
     public void doGet(HttpServletRequest request, HttpServletResponse response) throws IOException {
-    list.add("This is really intersting");
-    list.add("Hello world");
-    list.add("I don't like this as much");
-
     String json = convertToJson(list);
-    
     response.setContentType("application/json;");
     response.getWriter().println(json);
 }
 
-  private String convertToJson(ArrayList<String> comment) {
+@Override
+public void doPost(HttpServletRequest request, HttpServletResponse response) throws IOException{
+    String comment = getComment(request);
+
+    response.setContentType("text/html;");
+    response.getWriter().println(comment);
+}
+
+private String getComment(HttpServletRequest request) {
+    String comment = request.getParameter("comment");
+    return comment;
+}
+
+  private String convertToJson(ArrayList<String> data) {
     String json = "{ \n";
-    for(int i = 0; i < 3; i++){
-        json += "\"comment\": ";
-        json += "\"" + comment.get(i) + "\"";
-        json += ", ";
-        json += "\n";  
-    }
-    json += "}"
+    json += "\"comment\": ";
+    json += "\"" + data + "\"";
+    json += ", ";
+    json += "\n";  
+    json += "}";
     return json;
 }
 
-  private String convertToJsonUsingGson(String comment) {
+  private String convertToJsonUsingGson(String data) {
     Gson gson = new Gson();
 
-    String json = gson.toJson(comment);
+    String json = gson.toJson(data);
     return json;
   }
 }
