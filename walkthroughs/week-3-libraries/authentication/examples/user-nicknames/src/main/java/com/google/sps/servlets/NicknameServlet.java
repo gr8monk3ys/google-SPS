@@ -30,7 +30,6 @@ import javax.servlet.http.HttpServletResponse;
 
 @WebServlet("/nickname")
 public class NicknameServlet extends HttpServlet {
-
   @Override
   public void doGet(HttpServletRequest request, HttpServletResponse response) throws IOException {
     response.setContentType("text/html");
@@ -78,9 +77,8 @@ public class NicknameServlet extends HttpServlet {
    */
   private String getUserNickname(String id) {
     DatastoreService datastore = DatastoreServiceFactory.getDatastoreService();
-    Query query =
-        new Query("UserInfo")
-            .setFilter(new Query.FilterPredicate("id", Query.FilterOperator.EQUAL, id));
+    Query query = new Query("UserInfo")
+                      .setFilter(new Query.FilterPredicate("id", Query.FilterOperator.EQUAL, id));
     PreparedQuery results = datastore.prepare(query);
     Entity entity = results.asSingleEntity();
     if (entity == null) {

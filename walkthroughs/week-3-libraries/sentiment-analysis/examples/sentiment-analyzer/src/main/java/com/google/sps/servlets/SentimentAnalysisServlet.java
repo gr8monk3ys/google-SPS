@@ -25,7 +25,6 @@ import javax.servlet.http.HttpServletResponse;
 
 @WebServlet("/sentiment")
 public class SentimentAnalysisServlet extends HttpServlet {
-
   @Override
   public void doPost(HttpServletRequest request, HttpServletResponse response) throws IOException {
     String message = request.getParameter("message");

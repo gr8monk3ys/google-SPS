@@ -33,7 +33,6 @@ import javax.servlet.http.HttpServletResponse;
 /** Servlet responsible for listing tasks. */
 @WebServlet("/list-tasks")
 public class ListTasksServlet extends HttpServlet {
-
   @Override
   public void doGet(HttpServletRequest request, HttpServletResponse response) throws IOException {
     Query query = new Query("Task").addSort("timestamp", SortDirection.DESCENDING);

@@ -32,19 +32,18 @@ import javax.servlet.http.HttpServletResponse;
 /** Servlet that returns some example content. TODO: modify this file to handle comments data */
 @WebServlet("/data")
 public class DataServlet extends HttpServlet {
+  ArrayList<String> list = new ArrayList<String>();
 
-    ArrayList<String> list = new ArrayList<String>();
-
-    @Override
-    public void doGet(HttpServletRequest request, HttpServletResponse response) throws IOException {
+  @Override
+  public void doGet(HttpServletRequest request, HttpServletResponse response) throws IOException {
     Gson gson = new Gson();
     String json = gson.toJson(list);
     response.setContentType("application/json;");
     response.getWriter().println(json);
-}
+  }
 
-@Override
-public void doPost(HttpServletRequest request, HttpServletResponse response) throws IOException{
+  @Override
+  public void doPost(HttpServletRequest request, HttpServletResponse response) throws IOException {
     String comment = request.getParameter("comment");
 
     Entity commentEntity = new Entity("Comment");
@@ -65,7 +64,7 @@ public void doPost(HttpServletRequest request, HttpServletResponse response) thr
     Gson gson = new Gson();
     response.setContentType("application/json;");
     response.getWriter().println(gson.toJson(list));
-}
+  }
 
   private String convertToJsonUsingGson(ArrayList<String> data) {
     Gson gson = new Gson();

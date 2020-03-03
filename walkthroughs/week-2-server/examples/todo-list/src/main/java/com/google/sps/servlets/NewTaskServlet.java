@@ -26,7 +26,6 @@ import javax.servlet.http.HttpServletResponse;
 /** Servlet responsible for creating new tasks. */
 @WebServlet("/new-task")
 public class NewTaskServlet extends HttpServlet {
-
   @Override
   public void doPost(HttpServletRequest request, HttpServletResponse response) throws IOException {
     String title = request.getParameter("title");

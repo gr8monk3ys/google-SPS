@@ -14,8 +14,8 @@
 
 package com.google.sps.servlets;
 
-import com.google.sps.data.ServerStats;
 import com.google.gson.Gson;
+import com.google.sps.data.ServerStats;
 import java.io.IOException;
 import java.util.Date;
 import javax.servlet.annotation.WebServlet;
@@ -25,7 +25,6 @@ import javax.servlet.http.HttpServletResponse;
 
 @WebServlet("/server-stats")
 public final class ServerStatsServlet extends HttpServlet {
-
   private final Date startTime = new Date();
 
   @Override
