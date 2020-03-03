@@ -1,10 +1,10 @@
 * { 
-    font-family: 'Didact Gothic';
-    color: whitesmoke;
+  font-family: 'Didact Gothic';
+  color: whitesmoke;
 }
 
 body {
-background-image: linear-gradient(#434343,#000000);
+  background-image: linear-gradient(#434343,#000000);
 }
 
 .nav-items {
@@ -16,7 +16,7 @@ background-image: linear-gradient(#434343,#000000);
 }
 
 .nav-item {
-    float: left;
+  float: left;
   display: block;
   color: white;
   text-align: center;
@@ -30,14 +30,14 @@ background-image: linear-gradient(#434343,#000000);
 }
 
 .parallax {
-    background-image: url("../images/fiberOptic.jpg");
-    height: 500px;
-    background-attachment: fixed;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    filter: blur(4px);
-    -webkit-filter: blur(4px); 
+  background-image: url("../images/fiberOptic.jpg");
+  height: 500px;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  filter: blur(4px);
+  -webkit-filter: blur(4px); 
 }
 
 .centered {
@@ -49,16 +49,16 @@ background-image: linear-gradient(#434343,#000000);
 }
 
 #profile-pic {
-    border-radius: 50%;
-    width: 30%;
-    height: 0%;
-    transition: height 0.5s;
-    transition: width 0.5s;
+  border-radius: 50%;
+  width: 30%;
+  height: 0%;
+  transition: height 0.5s;
+  transition: width 0.5s;
 }
 
 #profile-pic:hover {
-    height: 35%;
-    width: 35%;
+  height: 35%;
+  width: 35%;
 }
 
 .content {    
@@ -68,26 +68,35 @@ background-image: linear-gradient(#434343,#000000);
 }
 
 .languages {
-    height: 10%;
-    width: 10%;
-    transition-duration: 0.3s;
+  height: 10%;
+  width: 10%;
+  transition-duration: 0.3s;
 }
 
 .languages:hover {
-    transform: perspective(1px) translateZ(5%);
+  transform: perspective(1px) translateZ(5%);
 }
 
 .category-image {
-    justify-content: center;
-    width : 90%;
-    height: 200px;
-    padding: 1%;
-    transition: ease-in 1s ease-out 2s;
-    filter: blur(4px);
-    -webkit-filter: blur(4px); 
+  justify-content: center;
+  width : 90%;
+  height: 200px;
+  padding: 1%;
+  transition: ease-in 1s ease-out 2s;
+  filter: blur(4px);
+  -webkit-filter: blur(4px); 
 }
 
 .category-image:hover {
-    filter: blur(0);
-    -webkit-filter: blur(0);
+  filter: blur(0);
+  -webkit-filter: blur(0);
+}
+
+#comment {
+  color: black;
+
+}
+
+#submit {
+  color: black;
 }
