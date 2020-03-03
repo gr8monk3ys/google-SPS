@@ -12,13 +12,12 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
-google.charts.load('current', {'packages':['corechart']});
+google.charts.load('current', {'packages': ['corechart']});
 google.charts.setOnLoadCallback(drawChart);
 
 /** Fetches color data and uses it to create a chart. */
 function drawChart() {
-  fetch('/color-data').then(response => response.json())
-  .then((colorVotes) => {
+  fetch('/color-data').then(response => response.json()).then((colorVotes) => {
     const data = new google.visualization.DataTable();
     data.addColumn('string', 'Color');
     data.addColumn('number', 'Votes');
@@ -26,11 +25,7 @@ function drawChart() {
       data.addRow([color, colorVotes[color]]);
     });
 
-    const options = {
-      'title': 'Favorite Colors',
-      'width':600,
-      'height':500
-    };
+    const options = {'title': 'Favorite Colors', 'width': 600, 'height': 500};
 
     const chart = new google.visualization.ColumnChart(
         document.getElementById('chart-container'));

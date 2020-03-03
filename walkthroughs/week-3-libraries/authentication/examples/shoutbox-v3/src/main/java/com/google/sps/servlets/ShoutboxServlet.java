@@ -31,7 +31,6 @@ import javax.servlet.http.HttpServletResponse;
 
 @WebServlet("/shoutbox")
 public class ShoutboxServlet extends HttpServlet {
-
   @Override
   public void doGet(HttpServletRequest request, HttpServletResponse response) throws IOException {
     response.setContentType("text/html;");
@@ -68,7 +67,6 @@ public class ShoutboxServlet extends HttpServlet {
 
   @Override
   public void doPost(HttpServletRequest request, HttpServletResponse response) throws IOException {
-
     UserService userService = UserServiceFactory.getUserService();
 
     // Only logged-in users can post messages

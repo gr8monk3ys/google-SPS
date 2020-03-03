@@ -47,10 +47,8 @@ import javax.servlet.http.HttpServletResponse;
  */
 @WebServlet("/image-analysis")
 public class ImageAnalysisServlet extends HttpServlet {
-
   @Override
   public void doPost(HttpServletRequest request, HttpServletResponse response) throws IOException {
-
     PrintWriter out = response.getWriter();
 
     // Get the message entered by the user.

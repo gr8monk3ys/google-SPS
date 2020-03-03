@@ -38,10 +38,8 @@ import javax.servlet.http.HttpServletResponse;
  */
 @WebServlet("/my-form-handler")
 public class FormHandlerServlet extends HttpServlet {
-
   @Override
   public void doPost(HttpServletRequest request, HttpServletResponse response) throws IOException {
-
     // Get the message entered by the user.
     String message = request.getParameter("message");
 

@@ -14,11 +14,11 @@
 
 package com.google.sps.servlets;
 
+import com.google.gson.Gson;
 import com.google.sps.Events;
 import com.google.sps.FindMeetingQuery;
 import com.google.sps.MeetingRequest;
 import com.google.sps.TimeRange;
-import com.google.gson.Gson;
 import java.io.IOException;
 import java.util.Arrays;
 import java.util.Collection;

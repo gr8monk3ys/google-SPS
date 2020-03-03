@@ -22,7 +22,6 @@ import javax.servlet.http.HttpServletResponse;
 
 @WebServlet("/my-data-url")
 public class DataServlet extends HttpServlet {
-
   @Override
   public void doPost(HttpServletRequest request, HttpServletResponse response) throws IOException {
     String name = request.getParameter("name-input");

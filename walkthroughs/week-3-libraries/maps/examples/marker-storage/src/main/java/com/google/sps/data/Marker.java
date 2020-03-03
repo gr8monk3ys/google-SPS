@@ -16,7 +16,6 @@ package com.google.sps.data;
 
 /** Represents a marker on the map. */
 public class Marker {
-
   private final double lat;
   private final double lng;
   private final String content;

@@ -12,3 +12,17 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
+function getComment() {
+  fetch('/data').then(response => response.json()).then((data) => {
+    const CommentListElement = document.getElementById('comment-list');
+    data.forEach((data) => {
+      CommentListElement.appendChild(createCommentElement(data));
+    })
+  });
+}
+
+function createCommentElement(text) {
+  const liElement = document.createElement('li');
+  liElement.innerText = text;
+  return liElement;
+}

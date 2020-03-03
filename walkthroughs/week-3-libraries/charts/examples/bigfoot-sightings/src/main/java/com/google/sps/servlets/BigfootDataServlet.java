@@ -26,13 +26,12 @@ import javax.servlet.http.HttpServletResponse;
 /** Returns bigfoot data as a JSON object, e.g. {"2017": 52, "2018": 34}] */
 @WebServlet("/bigfoot-data")
 public class BigfootDataServlet extends HttpServlet {
-
   private LinkedHashMap<Integer, Integer> bigfootSightings = new LinkedHashMap<>();
 
   @Override
   public void init() {
-    Scanner scanner = new Scanner(getServletContext().getResourceAsStream(
-        "/WEB-INF/bigfoot-sightings-by-year.csv"));
+    Scanner scanner = new Scanner(
+        getServletContext().getResourceAsStream("/WEB-INF/bigfoot-sightings-by-year.csv"));
     while (scanner.hasNextLine()) {
       String line = scanner.nextLine();
       String[] cells = line.split(",");

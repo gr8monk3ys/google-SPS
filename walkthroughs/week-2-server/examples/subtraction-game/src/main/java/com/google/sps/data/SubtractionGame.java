@@ -23,7 +23,6 @@ import java.util.List;
  * <p>Note: The private variables in this class are converted into JSON.
  */
 public class SubtractionGame {
-
   /** List of descriptions of turns, e.g. "Player 1 took 3. New total: 18" */
   private final List<String> history = new ArrayList<>();
 

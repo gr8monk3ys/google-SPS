@@ -24,7 +24,6 @@ import javax.servlet.http.HttpServletResponse;
 /** Servlet that processes text. */
 @WebServlet("/text")
 public final class TextProcessorServlet extends HttpServlet {
-
   @Override
   public void doPost(HttpServletRequest request, HttpServletResponse response) throws IOException {
     // Get the input from the form.

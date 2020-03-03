@@ -14,8 +14,8 @@
 
 package com.google.sps.servlets;
 
-import com.google.sps.data.UfoSighting;
 import com.google.gson.Gson;
+import com.google.sps.data.UfoSighting;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Collection;
@@ -28,7 +28,6 @@ import javax.servlet.http.HttpServletResponse;
 /** Returns UFO data as a JSON array, e.g. [{"lat": 38.4404675, "lng": -122.7144313}] */
 @WebServlet("/ufo-data")
 public class UfoDataServlet extends HttpServlet {
-
   private Collection<UfoSighting> ufoSightings;
 
   @Override

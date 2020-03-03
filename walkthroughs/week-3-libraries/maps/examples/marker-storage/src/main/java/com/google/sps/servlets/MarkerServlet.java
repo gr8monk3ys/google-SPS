@@ -19,8 +19,8 @@ import com.google.appengine.api.datastore.DatastoreServiceFactory;
 import com.google.appengine.api.datastore.Entity;
 import com.google.appengine.api.datastore.PreparedQuery;
 import com.google.appengine.api.datastore.Query;
-import com.google.sps.data.Marker;
 import com.google.gson.Gson;
+import com.google.sps.data.Marker;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Collection;
@@ -34,7 +34,6 @@ import org.jsoup.safety.Whitelist;
 /** Handles fetching and saving markers data. */
 @WebServlet("/markers")
 public class MarkerServlet extends HttpServlet {
-
   /** Responds with a JSON array containing marker data. */
   @Override
   public void doGet(HttpServletRequest request, HttpServletResponse response) throws IOException {

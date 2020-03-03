@@ -18,7 +18,6 @@ import java.util.Date;
 
 /** Class containing server statistics. */
 public final class ServerStats {
-
   private final Date startTime;
   private final Date currentTime;
   private final long maxMemory;
