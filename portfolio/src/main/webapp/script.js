@@ -26,3 +26,18 @@ function createCommentElement(text) {
   liElement.innerText = text;
   return liElement;
 }
+
+function getStatus(){
+    fetch('/status').then(response => response.json()).then((status) => {
+        const StatusElement = document.getElementById('UserStatus');
+        StatusElement.appendChild(createStatusElement(status));
+
+    })
+}
+
+function createStatusElement(text) {
+  const liElement = document.createElement('td');
+  liElement.innerText = text;
+  return liElement;
+}
+

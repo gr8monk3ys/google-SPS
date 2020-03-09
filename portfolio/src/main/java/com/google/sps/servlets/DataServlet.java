@@ -59,6 +59,7 @@ public class DataServlet extends HttpServlet {
       String text = (String) entity.getProperty("comment");
 
       list.add(text);
+      response.sendRedirect("/");
     }
 
     Gson gson = new Gson();
